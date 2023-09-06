@@ -10,6 +10,7 @@ import SectionBuilder from './SectionBuilder/SectionBuilder.js';
 import StaticPage from './StaticPage.js';
 
 import css from './PageBuilder.module.css';
+import LandingPageMainComponent from '../../components/LandingPageMain/LandingPageMain.js';
 
 const getMetadata = (meta, schemaType, fieldOptions) => {
   const { pageTitle, pageDescription, socialSharing } = meta;
@@ -113,16 +114,10 @@ const PageBuilder = props => {
           const { Topbar, Main, Footer } = props;
           return (
             <>
-              <Topbar as="header" className={css.topbar}>
+              <Topbar as="header">
                 <TopbarContainer />
               </Topbar>
-              <Main as="main" className={css.main}>
-                {sections.length === 0 && inProgress ? (
-                  <LoadingSpinner />
-                ) : (
-                  <SectionBuilder sections={sections} options={options} />
-                )}
-              </Main>
+              <LandingPageMainComponent />
               <FooterContainer />
             </>
           );

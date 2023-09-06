@@ -138,23 +138,51 @@ const TopbarDesktop = props => {
   );
 
   return (
-    <nav className={classes}>
-      <LinkedLogo
-        className={css.logoLink}
-        format="desktop"
-        alt={intl.formatMessage({ id: 'TopbarDesktop.logo' }, { marketplaceName })}
-      />
-      {search}
-      <NamedLink className={css.createListingLink} name="NewListingPage">
-        <span className={css.createListing}>
-          <FormattedMessage id="TopbarDesktop.createListing" />
-        </span>
-      </NamedLink>
-      {inboxLink}
-      {profileMenu}
-      {signupLink}
-      {loginLink}
-    </nav>
+
+    
+      <div className='container-main main-bg'>
+        <section className="hero">
+          <nav className='d-flex flex-direction-row'>
+            <div className="logo pad-small">CLAYSOLE</div>
+            <div className="links">
+              <a href="">Home</a>
+              <hr className="vr"></hr>
+              <a href="">About</a>
+              <hr className="vr"></hr>
+              <a href="">Gallery</a>
+              <hr className="vr"></hr>
+              <a href="">Services</a>
+              <hr className="vr"></hr>
+              <a href="">Contact</a>
+            </div>
+            <div className="pad-small">
+              <i className="nav-icon fa-solid fa-magnifying-glass"></i>
+              <i className="nav-icon fa-regular fa-bell"></i>
+              <i className="nav-icon fa-solid fa-right-to-bracket"></i>
+          </div>
+          </nav>
+          <section class="caption">
+				
+            <p>
+              We are commited to serving you better.
+              Just connect and buy and sell.
+            </p>
+            <a href="">Shop Now</a>
+
+          </section>
+          <section class="floatingButton-style">
+            <div class="floatingButton">
+              <img class="caption-img" src="images/pic1.png"/>
+            </div>
+          </section>
+         
+        </section>
+
+      </div>
+     
+    
+    
+   
   );
 };
 
