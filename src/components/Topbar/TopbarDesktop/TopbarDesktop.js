@@ -146,7 +146,7 @@ const TopbarDesktop = props => {
     
       <div className='container-main main-bg'>
         <section className="hero">
-          <nav className='d-flex flex-direction-row'>
+          <nav className={csss.nav}>
             <div className={csss.logo}>CLAYSOLE</div>
               
             <div className="links">

@@ -168,9 +168,9 @@ function LandingPageMainComponent(){
 		<div className="text-center bold-text-1">
 			<h4 className={css.magB2}>PRODUCTS</h4>
 			<h1 className={css.magB2}>Merchandise</h1>
-			<div className={css.col13}>
-				<a className="btn btn-outline-primary" href="#">SHOP</a>
-				<a className="btn btn-outline-primary" href="#">CREATE</a>
+			<div className={css.btnOutlinePrimary}>
+				<a className={css.btnOutlinePrimary} href="#">SHOP</a>
+				<a className={css.btnOutlinePrimary} href="#">CREATE</a>
 			</div>
 			<p className="text-center container p-5">
 				When you are looking for the best marketplace where you can get everything you want with just few clicks.

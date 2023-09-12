@@ -121,7 +121,7 @@
       width: 100%;
       display: inline-flex;
       flex-direction: row;
-      background: rgba(0, 0, 0, 0.393);
+      background: rgba(0, 0, 0, 0.69);
       justify-content: space-around;
       padding: 10px;
     }
@@ -307,6 +307,42 @@
     }
 	.items{
         color: rgb(137, 137, 137);
+    }
+    .btnOutlinePrimary{
+        background-color: transparent;
+        border-style:solid;
+        border-width: thick;
+        border-radius: 10px;
+        padding: 10px;
+        margin:0 auto;
+        width: min-content;
+        border-color: rgb(210, 210, 210);
+
+
+    }
+    .btnOutlinePrimary:hover{
+        background-color: rgb(27, 104, 248);
+        color:white;
+        text-decoration: none;
+    }
+    .btnOutlinePrimary a{
+        background-color: transparent;
+        border-style:solid;
+        border-width: thin;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .btnOutlinePrimary a:hover{
+        background-color: rgb(27, 104, 248);
+        color:white;
+        text-decoration: none;
+        border-style:none;
+        
+        font-weight: bold;
     }
 
   
