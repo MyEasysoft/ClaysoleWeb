@@ -49,8 +49,7 @@ import { fetchCurrentUser } from './ducks/user.duck';
 import routeConfiguration from './routing/routeConfiguration';
 // App it self
 import { ClientApp, renderApp } from './app';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 const render = (store, shouldHydrate) => {
   // If the server already loaded the auth information, render the app
