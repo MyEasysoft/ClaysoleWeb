@@ -19,6 +19,10 @@ import {
 import TopbarSearchForm from '../TopbarSearchForm/TopbarSearchForm';
 
 import css from './TopbarDesktop.module.css';
+import csss from '../../../components/LandingPageMain/LandingPageMain.module.css';
+import bg from '../../../assets/bg.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faBell, faSignIn, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
 const TopbarDesktop = props => {
   const {
@@ -143,7 +147,8 @@ const TopbarDesktop = props => {
       <div className='container-main main-bg'>
         <section className="hero">
           <nav className='d-flex flex-direction-row'>
-            <div className="logo pad-small">CLAYSOLE</div>
+            <div className={csss.logo}>CLAYSOLE</div>
+              
             <div className="links">
               <a href="">Home</a>
               <hr className="vr"></hr>
@@ -155,26 +160,20 @@ const TopbarDesktop = props => {
               <hr className="vr"></hr>
               <a href="">Contact</a>
             </div>
-            <div className="pad-small">
-              <i className="nav-icon fa-solid fa-magnifying-glass"></i>
-              <i className="nav-icon fa-regular fa-bell"></i>
-              <i className="nav-icon fa-solid fa-right-to-bracket"></i>
+            <div className={csss.padsmall}>
+              <FontAwesomeIcon className={csss.icon} icon={faMagnifyingGlass} />
+              <FontAwesomeIcon className={csss.icon} icon={faBell} />
+              <FontAwesomeIcon className={csss.icon} icon={faSignIn} />
           </div>
           </nav>
-          <section class="caption">
-				
-            <p>
-              We are commited to serving you better.
-              Just connect and buy and sell.
-            </p>
-            <a href="">Shop Now</a>
 
-          </section>
+        
           <section class="floatingButton-style">
             <div class="floatingButton">
-              <img class="caption-img" src="images/pic1.png"/>
+              <img class="caption-img" src={bg}/>
             </div>
           </section>
+         
          
         </section>
 

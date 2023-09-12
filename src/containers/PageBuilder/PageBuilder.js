@@ -117,7 +117,15 @@ const PageBuilder = props => {
               <Topbar as="header">
                 <TopbarContainer />
               </Topbar>
+
               <LandingPageMainComponent />
+              <Main as="main" className={css.main}>
+                {sections.length === 0 && inProgress ? (
+                  <LoadingSpinner />
+                ) : (
+                  <SectionBuilder sections={sections} options={options} />
+                )}
+              </Main>
               <FooterContainer />
             </>
           );
