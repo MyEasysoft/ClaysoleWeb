@@ -168,9 +168,9 @@ const TopbarDesktop = props => {
           </nav>
 
         
-          <section class="floatingButton-style">
-            <div class="floatingButton">
-              <img class="caption-img" src={bg}/>
+          <section className={csss.floatingButtonstyle}>
+            <div className={csss.floatingButton}>
+              <img className={csss.captionimg} src={bg}/>
             </div>
           </section>
          

@@ -70,11 +70,7 @@
     height: 100vh;
     width: 100%;
   }
-  .logo{
-    font-size: 25px;
-    font-weight: bolder;
-    color: white;
-  }
+  
 
   .caption{
     position: absolute;
@@ -84,7 +80,7 @@
     left:20px;
     
   }
-  .caption-img{
+  .captionimg{
     
     width: 100%;
     height: 100%;
@@ -115,7 +111,7 @@
     
   }
 
-  .floatingButton-style{
+  .floatingButtonstyle{
     position: fixed;
     right:9.5%;
     float: left;
