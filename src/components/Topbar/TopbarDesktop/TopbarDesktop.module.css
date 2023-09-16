@@ -228,11 +228,12 @@
   height: 100%;
   padding: 0 12px 0 12px;
 
-  color: var(--colorGrey700);
+  color: var(--colorWhite);
+  
 
   &:hover {
-    color: var(--colorBlack);
-    border-bottom: 4px solid var(--marketplaceColor);
+    
+    border-bottom: 1px solid var(--colorWhite);
     border-radius: 0;
     text-decoration: none;
   }
@@ -246,11 +247,11 @@
   height: 100%;
   padding: 0 12px 0 12px;
 
-  color: var(--colorGrey700);
-
+  color: var(--colorWhite);
+  
   &:hover {
-    color: var(--colorBlack);
-    border-bottom: 4px solid var(--marketplaceColor);
+    
+    border-bottom: 1px solid var(--colorWhite);
     border-radius: 0;
     text-decoration: none;
   }

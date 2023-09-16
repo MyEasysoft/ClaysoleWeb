@@ -20,7 +20,7 @@ import TopbarSearchForm from '../TopbarSearchForm/TopbarSearchForm';
 
 import css from './TopbarDesktop.module.css';
 import csss from '../../../components/LandingPageMain/LandingPageMain.module.css';
-import bg from '../../../assets/bg.png';
+import bg from '../../../assets/pic2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faBell, faSignIn, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
@@ -141,29 +141,72 @@ const TopbarDesktop = props => {
     </NamedLink>
   );
 
+  const homeLink = isAuthenticatedOrJustHydrated ? null : (
+    <NamedLink name="LandingPage" className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="Home" />
+      </span>
+    </NamedLink>
+  );
+  const aboutLink = isAuthenticatedOrJustHydrated ? null : (
+    <NamedLink name="LandingPage" className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="About" />
+      </span>
+    </NamedLink>
+  );
+  const GalleryLink = isAuthenticatedOrJustHydrated ? null : (
+    <NamedLink name="LandingPage" className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="Gallery" />
+      </span>
+    </NamedLink>
+  );
+  const servicesLink = isAuthenticatedOrJustHydrated ? null : (
+    <NamedLink name="LandingPage" className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="Services" />
+      </span>
+    </NamedLink>
+  );
+  const contactLink = isAuthenticatedOrJustHydrated ? null : (
+    <NamedLink name="LandingPage" className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="Contact" />
+      </span>
+    </NamedLink>
+  );
+
   return (
 
     
-      <div className='container-main main-bg'>
-        <section className="hero">
-          <nav className={csss.nav}>
-            <div className={csss.logo}>CLAYSOLE</div>
-              
+      <div>
+        <section>
+          <nav className={csss.navMain +" " +classes}>
+            <div>
+                <LinkedLogo
+                  format="desktop"
+                  alt={intl.formatMessage({ id: 'TopbarDesktop.logo' }, { marketplaceName })}
+                />
+            </div>
             <div className="links">
-              <a href="">Home</a>
-              <hr className="vr"></hr>
-              <a href="">About</a>
-              <hr className="vr"></hr>
-              <a href="">Gallery</a>
-              <hr className="vr"></hr>
-              <a href="">Services</a>
-              <hr className="vr"></hr>
-              <a href="">Contact</a>
+             
+              {homeLink}
+              
+              {aboutLink}
+              
+              {GalleryLink}
+              
+              {signupLink}
+              
+              {loginLink}
+             
             </div>
             <div className={csss.padsmall}>
               <FontAwesomeIcon className={csss.icon} icon={faMagnifyingGlass} />
               <FontAwesomeIcon className={csss.icon} icon={faBell} />
               <FontAwesomeIcon className={csss.icon} icon={faSignIn} />
+             
           </div>
           </nav>
 

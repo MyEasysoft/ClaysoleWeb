@@ -18,7 +18,7 @@
   padding-top: 29px;
 
   @media (--viewportMedium) {
-    margin-top: 5vh;
+    margin-top: 20vh;
     margin-bottom: 7.5vh;
     min-height: 700px;
   }
