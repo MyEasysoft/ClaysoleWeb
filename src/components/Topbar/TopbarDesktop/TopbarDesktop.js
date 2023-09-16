@@ -141,31 +141,31 @@ const TopbarDesktop = props => {
     </NamedLink>
   );
 
-  const homeLink = isAuthenticatedOrJustHydrated ? null : (
+  const menLink = isAuthenticatedOrJustHydrated ? null : (
     <NamedLink name="LandingPage" className={css.loginLink}>
       <span className={css.login}>
-        <FormattedMessage id="Home" />
+        <FormattedMessage id="Men" />
       </span>
     </NamedLink>
   );
-  const aboutLink = isAuthenticatedOrJustHydrated ? null : (
+  const womenLink = isAuthenticatedOrJustHydrated ? null : (
     <NamedLink name="LandingPage" className={css.loginLink}>
       <span className={css.login}>
-        <FormattedMessage id="About" />
+        <FormattedMessage id="Women" />
       </span>
     </NamedLink>
   );
-  const GalleryLink = isAuthenticatedOrJustHydrated ? null : (
+  const kidsLink = isAuthenticatedOrJustHydrated ? null : (
     <NamedLink name="LandingPage" className={css.loginLink}>
       <span className={css.login}>
-        <FormattedMessage id="Gallery" />
+        <FormattedMessage id="Kids" />
       </span>
     </NamedLink>
   );
-  const servicesLink = isAuthenticatedOrJustHydrated ? null : (
+  const accesoriesLink = isAuthenticatedOrJustHydrated ? null : (
     <NamedLink name="LandingPage" className={css.loginLink}>
       <span className={css.login}>
-        <FormattedMessage id="Services" />
+        <FormattedMessage id="Accesories" />
       </span>
     </NamedLink>
   );
@@ -191,13 +191,13 @@ const TopbarDesktop = props => {
             </div>
             <div className="links">
              
-              {homeLink}
+              {menLink}
               
-              {aboutLink}
+              {womenLink}
               
-              {GalleryLink}
+              {kidsLink}
               
-              {signupLink}
+              {accesoriesLink}
               
               {loginLink}
              
