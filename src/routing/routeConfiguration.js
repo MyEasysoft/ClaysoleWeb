@@ -16,6 +16,11 @@ const AuthenticationPage = loadable(() => import(/* webpackChunkName: "Authentic
 const CheckoutPage = loadable(() => import(/* webpackChunkName: "CheckoutPage" */ '../containers/CheckoutPage/CheckoutPage'));
 const CMSPage = loadable(() => import(/* webpackChunkName: "CMSPage" */ '../containers/CMSPage/CMSPage'));
 const ContactDetailsPage = loadable(() => import(/* webpackChunkName: "ContactDetailsPage" */ '../containers/ContactDetailsPage/ContactDetailsPage'));
+const SellerInstructionPage = loadable(() => import(/* webpackChunkName: "ContactDetailsPage" */ '../components/LandingPageMain/SellerInstructionPage'));
+
+
+const BusinessVerificationPage = loadable(() => import(/* webpackChunkName: "BusinessVerificationPage" */ '../containers/ContactDetailsPage/ContactDetailsPage'));
+
 const EditListingPage = loadable(() => import(/* webpackChunkName: "EditListingPage" */ '../containers/EditListingPage/EditListingPage'));
 const EmailVerificationPage = loadable(() => import(/* webpackChunkName: "EmailVerificationPage" */ '../containers/EmailVerificationPage/EmailVerificationPage'));
 const InboxPage = loadable(() => import(/* webpackChunkName: "InboxPage" */ '../containers/InboxPage/InboxPage'));
@@ -45,6 +50,7 @@ export const ACCOUNT_SETTINGS_PAGES = [
   'PasswordChangePage',
   'StripePayoutPage',
   'PaymentMethodsPage',
+  
 ];
 
 // https://en.wikipedia.org/wiki/Universally_unique_identifier#Nil_UUID
@@ -264,6 +270,7 @@ const routeConfiguration = (layoutConfig) => {
       authPage: 'LoginPage',
       component: () => <NamedRedirect name="ContactDetailsPage" />,
     },
+   
     {
       path: '/account/contact-details',
       name: 'ContactDetailsPage',
@@ -272,6 +279,25 @@ const routeConfiguration = (layoutConfig) => {
       component: ContactDetailsPage,
       loadData: pageDataLoadingAPI.ContactDetailsPage.loadData,
     },
+
+    {
+      path: '/account/business',
+      name: 'BusinessVerificationPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: BusinessVerificationPage,
+      loadData: pageDataLoadingAPI.ContactDetailsPage.loadData,
+    },
+
+    {
+      path: '/account/seller-instruction',
+      name: 'SellerInstructionPage',
+      auth: false,
+      component: LandingPage,
+      loadData: pageDataLoadingAPI.ContactDetailsPage.loadData,
+    },
+
+    
     {
       path: '/account/change-password',
       name: 'PasswordChangePage',

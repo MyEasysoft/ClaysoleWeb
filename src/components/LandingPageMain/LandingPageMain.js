@@ -7,6 +7,7 @@ import bag4 from '../../assets/bag4.jpg';
 import bag5 from '../../assets/bag4.jpg';
 import bag6 from '../../assets/bag3.jpg';
 import profileImg from '../../assets/bg.png';
+import classNames from 'classnames';
 
 
 function LandingPageMainComponent(){
@@ -15,7 +16,7 @@ function LandingPageMainComponent(){
     <>
        <div className={css.container +' '+ css.textCenter}>
 		<div className={css.col12 +" "+ css.magB3}>
-			<h4 className={css.magB2}>PRODUCTS</h4>
+			<h4 className={css.magB2}>ADVERTISEMENT</h4>
 			<h1>We deal with the best</h1>
 		</div>
 		<div className={css.row}>
@@ -42,12 +43,12 @@ function LandingPageMainComponent(){
 				<div className={css.row}>
 					<div className={css.col4}>
 						<figure>
-							<img className="img-size-1" src={bag4}/>
+							<img className={css.imgSize1} src={bag4}/>
 						</figure>
 					</div>
 					<div className={css.col4}>
 						<figure>
-							<img className="img-size-1" src={bag5}/>
+							<img className={css.imgSize1} src={bag5}/>
 						</figure>
 					</div>
 					<div className={css.col4}>
@@ -85,7 +86,7 @@ function LandingPageMainComponent(){
 			<div className={css.row +" "+ css.pad3}>
 						
 						<div className={css.col6}>
-							<h4 className={css.textDanger}>ABOUT US</h4>
+							<h4 className={css.textDanger}>CATEGORIES</h4>
 							<h1>Who We Are</h1>
 							<p>
 								When you are looking for the best marketplace where you can get everything you want with just few clicks.
@@ -105,7 +106,7 @@ function LandingPageMainComponent(){
 							
 							<div>
 								<div className={css.badge1}>
-									<img className="img-size-1 circle-img-1" src={profileImg}/>
+									<img className={classNames(css.imgSize1 ,css.circleImg1)}  src={profileImg}/>
 									
 									<div className={css.items}>
 										<p>Timothy bought 1000pcs of clothes last week<br/>
@@ -113,9 +114,10 @@ function LandingPageMainComponent(){
 									</div>
 								</div>
 							</div>
+
 							<div>
 								<div className={css.badge1}>
-									<img className="img-size-1 circle-img-1" src={profileImg}/>
+									<img className={classNames(css.imgSize1 ,css.circleImg1)}  src={profileImg}/>
 									
 									<div className={css.items}>
 										<p>Timothy bought 1000pcs of clothes last week<br/>
@@ -123,9 +125,10 @@ function LandingPageMainComponent(){
 									</div>
 								</div>
 							</div>
+
 							<div>
 								<div className={css.badge1}>
-									<img className="img-size-1 circle-img-1" src={profileImg}/>
+									<img className={classNames(css.imgSize1 ,css.circleImg1)}  src={profileImg}/>
 									
 									<div className={css.items}>
 										<p>Timothy bought 1000pcs of clothes last week<br/>
@@ -133,9 +136,10 @@ function LandingPageMainComponent(){
 									</div>
 								</div>
 							</div>
+
 							<div>
 								<div className={css.badge1}>
-									<img className="img-size-1 circle-img-1" src={profileImg}/>
+									<img className={classNames(css.imgSize1 ,css.circleImg1)}  src={profileImg}/>
 									
 									<div className={css.items}>
 										<p>Timothy bought 1000pcs of clothes last week<br/>
@@ -143,16 +147,9 @@ function LandingPageMainComponent(){
 									</div>
 								</div>
 							</div>
-							<div>
-								<div className={css.badge1}>
-									<img className="img-size-1 circle-img-1" src={profileImg}/>
-									
-									<div className={css.items}>
-										<p>Timothy bought 1000pcs of clothes last week<br/>
-										<span className={css.text1}>4 days ago</span></p>
-									</div>
-								</div>
-							</div>
+							
+							
+							
 							
 							
 						</div>
@@ -166,7 +163,7 @@ function LandingPageMainComponent(){
 
 	<div className={css.container +" "+ css.textCenter}>
 		<div className="text-center bold-text-1">
-			<h4 className={css.magB2}>PRODUCTS</h4>
+			<h4 className={css.magB2}>BRANDS</h4>
 			<h1 className={css.magB2}>Merchandise</h1>
 			<div className={css.btnOutlinePrimary}>
 				<a className={css.btnOutlinePrimary} href="#">SHOP</a>
@@ -221,7 +218,7 @@ function LandingPageMainComponent(){
 								</div>
 					</div>
 					<div className={css.col3}>
-							<img className={css.imgFluid +" "+ css.pad1 +" "+ css.shadowSm} src={bag4}/>
+							<img className={classNames( css.imgFluid,css.pad1,css.shadowSm)} src={bag4}/>
 								<div className={css.badge2}>
 									
 										<img className={css.circleImg2} src={profileImg}/>

@@ -338,73 +338,104 @@ class ContactDetailsFormComponent extends Component {
             !(emailChanged || phoneNumberChanged);
 
           return (
-           
-             <Form
-              className={classes}
-              onSubmit={e => {
-                this.submittedValues = values;
-                handleSubmit(e);
-              }}
-            >
-              <div className={css.contactDetailsSection}>
-                <FieldTextInput
-                  type="email"
-                  name="email"
-                  id={formId ? `${formId}.email` : 'email'}
-                  label={emailLabel}
-                  placeholder={emailPlaceholder}
-                  validate={validators.composeValidators(emailRequired, emailValid)}
-                  customErrorText={emailTouched ? null : emailTakenErrorText}
-                />
-                {emailVerifiedInfo}
-                <FieldPhoneNumberInput
-                  className={css.phone}
-                  name="phoneNumber"
-                  id={formId ? `${formId}.phoneNumber` : 'phoneNumber'}
-                  label={phoneLabel}
-                  placeholder={phonePlaceholder}
-                />
-              </div>
+                <Form
+                              className={classes}
+                              onSubmit={e => {
+                                this.submittedValues = values;
+                                handleSubmit(e);
+                              }}
+                            >
+                              
+                              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                                <H4 as="h2" className={css.sectionTitle}>
+                                  <FormattedMessage id="ProfileSettingsForm.becomeASeller" />
+                                </H4>
+                                <p><FormattedMessage id="ProfileSettingsForm.becomeASellerInstruction" /></p>
+                                <FieldTextInput
+                                    className={css.otherInputs}
+                                    type="text"
+                                    id="businessName"
+                                    name="businessName"
+                                    label={businessNameLabel}
+                                    placeholder={businessNamePlaceholder}
+                                  
+                                  />
 
-              <div className={confirmClasses}>
-                <H4 as="h3" className={css.confirmChangesTitle}>
-                  <FormattedMessage id="ContactDetailsForm.confirmChangesTitle" />
-                </H4>
-                <p className={css.confirmChangesInfo}>
-                  <FormattedMessage id="ContactDetailsForm.confirmChangesInfo" />
-                  <br />
-                  <FormattedMessage
-                    id="ContactDetailsForm.resetPasswordInfo"
-                    values={{ resetPasswordLink }}
-                  />
-                </p>
+                                  <FieldTextInput
+                                    className={css.otherInputs}
+                                    type="text"
+                                    id="businessName"
+                                    name="businessName"
+                                    label={businessIRSNumberPlaceholder}
+                                    placeholder={businessIRSNumberPlaceholder}
+                                    
+                                  />
 
-                <FieldTextInput
-                  className={css.password}
-                  type="password"
-                  name="currentPassword"
-                  id={formId ? `${formId}.currentPassword` : 'currentPassword'}
-                  autoComplete="current-password"
-                  label={passwordLabel}
-                  placeholder={passwordPlaceholder}
-                  validate={passwordValidators}
-                  customErrorText={passwordTouched ? null : passwordErrorText}
-                />
-              </div>
+                                  <FieldTextInput
+                                    className={css.otherInputs}
+                                    type="text"
+                                    id="businessStreet"
+                                    name="businessStreet"
+                                    label={businessStreetPlaceholder}
+                                    placeholder={businessStreetPlaceholder}
+                                  
+                                  />
 
-              <div className={css.bottomWrapper}>
-                {genericError}
-                <PrimaryButton
-                  type="submit"
-                  inProgress={inProgress}
-                  ready={pristineSinceLastSubmit}
-                  disabled={submitDisabled}
-                >
-                  <FormattedMessage id="ContactDetailsForm.saveChanges" />
-                </PrimaryButton>
-              </div>
-            </Form>
-           
+                                  <FieldTextInput
+                                    className={css.otherInputs}
+                                    type="text"
+                                    id="businessCity"
+                                    name="businessCity"
+                                    label={businessCityPlaceholder}
+                                    placeholder={businessCityPlaceholder}
+                                  
+                                  />
+
+                                  <FieldTextInput
+                                    className={css.otherInputs}
+                                    type="text"
+                                    id="businessState"
+                                    name="businessState"
+                                    label={businessStatePlaceholder}
+                                    placeholder={businessStatePlaceholder}
+                                    
+                                  />
+
+                                  <FieldTextInput
+                                    className={css.otherInputs}
+                                    type="text"
+                                    id="businessState"
+                                    name="businessState"
+                                    label={businessStatePlaceholder}
+                                    placeholder={businessStatePlaceholder}
+                                  
+                                  />
+
+                              
+                                <p className={css.bioInfo}>
+                                  <FormattedMessage id="ProfileSettingsForm.bioInfo" values='Claysole' />
+                                </p>
+                              </div>
+
+
+
+
+
+
+
+
+                              <div className={css.bottomWrapper}>
+                                {genericError}
+                                <PrimaryButton
+                                  type="submit"
+                                  inProgress={inProgress}
+                                  ready={pristineSinceLastSubmit}
+                                  disabled={submitDisabled}
+                                >
+                                  <FormattedMessage id="Verify" />
+                                </PrimaryButton>
+                              </div>
+                            </Form>
           );
         }}
       />

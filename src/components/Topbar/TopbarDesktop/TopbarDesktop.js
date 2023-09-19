@@ -48,7 +48,11 @@ const TopbarDesktop = props => {
   const marketplaceName = appConfig.marketplaceName;
   const authenticatedOnClientSide = mounted && isAuthenticated;
   const isAuthenticatedOrJustHydrated = isAuthenticated || !mounted;
+  const isLandingPage =(currentPage===null||currentPage.includes("LandingPage"))?true:false;
 
+  console.log(isLandingPage);
+  console.log(isAuthenticatedOrJustHydrated+"-----------------------------");
+  
   const classes = classNames(rootClassName || css.root, className);
 
   const search = (
@@ -115,6 +119,17 @@ const TopbarDesktop = props => {
             <FormattedMessage id="TopbarDesktop.accountSettingsLink" />
           </NamedLink>
         </MenuItem>
+        <MenuItem key="BusinessVerificationPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('BusinessVerificationPage'))}
+            name="BusinessVerificationPage"
+          >
+            <span className={css.menuItemBorder} />
+            <FormattedMessage id="TopbarDesktop.BusinessVerification" />
+          </NamedLink>
+        </MenuItem>
+
+        
         <MenuItem key="logout">
           <InlineTextButton rootClassName={css.logoutButton} onClick={onLogout}>
             <span className={css.menuItemBorder} />
@@ -136,11 +151,18 @@ const TopbarDesktop = props => {
   const loginLink = isAuthenticatedOrJustHydrated ? null : (
     <NamedLink name="LoginPage" className={css.loginLink}>
       <span className={css.login}>
-        <FormattedMessage id="TopbarDesktop.login" />
+        <FormattedMessage id="TopbarDesktop.signin" />
       </span>
     </NamedLink>
   );
-
+  const becomeASellerLink = isAuthenticatedOrJustHydrated ? null : (
+    <NamedLink name="SellerInstructionPage" className={css.loginLink}>
+      <span className={css.login}>
+        <FormattedMessage id="TopbarDesktop.BecomeASeller" />
+      </span>
+    </NamedLink>
+  );
+  
   const menLink = isAuthenticatedOrJustHydrated ? null : (
     <NamedLink name="LandingPage" className={css.loginLink}>
       <span className={css.login}>
@@ -177,12 +199,34 @@ const TopbarDesktop = props => {
     </NamedLink>
   );
 
-  return (
+  const menuIcons = isAuthenticatedOrJustHydrated ? null : (
+    <div className={csss.padsmall}>
+              <FontAwesomeIcon className={csss.icon} icon={faMagnifyingGlass} />
+              <FontAwesomeIcon className={csss.icon} icon={faBell} />
+              <FontAwesomeIcon className={csss.icon} icon={faSignIn} />
+            </div>
+  );
 
-    
+ 
+  const profileMenuContainer = isLandingPage && isAuthenticatedOrJustHydrated ? "" :  (
+    <div className={csss.iconRow}>
+      {inboxLink}
+      {profileMenu}
+    </div>
+  );
+
+  let overlayStyle = csss.navMain;
+  let normalStyle = csss.navMainNoOverlay;
+  let overlay = (currentPage==null)?overlayStyle:normalStyle;
+  (currentPage==null)?overlayStyle:normalStyle;
+
+  console.log(profileMenuContainer.toString()+"-------------------------------------------------------------");
+
+
+  return (
       <div>
         <section>
-          <nav className={csss.navMain +" " +classes}>
+          <nav className={overlay +" " +classes}>
             <div>
                 <LinkedLogo
                   format="desktop"
@@ -192,22 +236,23 @@ const TopbarDesktop = props => {
             <div className="links">
              
               {menLink}
-              
               {womenLink}
-              
               {kidsLink}
-              
               {accesoriesLink}
-              
               {loginLink}
+              {becomeASellerLink}
              
             </div>
-            <div className={csss.padsmall}>
-              <FontAwesomeIcon className={csss.icon} icon={faMagnifyingGlass} />
-              <FontAwesomeIcon className={csss.icon} icon={faBell} />
-              <FontAwesomeIcon className={csss.icon} icon={faSignIn} />
-             
-          </div>
+            <div className={csss.menuCol}>
+              {menuIcons}
+           
+              <div className={csss.iconRow}>
+                {inboxLink}
+                {profileMenu}
+              </div>
+            </div>
+            
+           
           </nav>
 
         

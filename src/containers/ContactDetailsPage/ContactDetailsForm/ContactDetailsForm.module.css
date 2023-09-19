@@ -144,3 +144,14 @@
     margin: 24px 0;
   }
 }
+
+.otherInputs{
+  margin-bottom: 20px;
+}
+.overlayform{
+  position: absolute;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 5px;
+  top: 20%;
+  padding: 50px;
+}

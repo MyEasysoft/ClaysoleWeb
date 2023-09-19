@@ -92,6 +92,7 @@ class ProfileSettingsFormComponent extends Component {
           const lastNameLabel = intl.formatMessage({
             id: 'ProfileSettingsForm.lastNameLabel',
           });
+
           const lastNamePlaceholder = intl.formatMessage({
             id: 'ProfileSettingsForm.lastNamePlaceholder',
           });
@@ -100,6 +101,30 @@ class ProfileSettingsFormComponent extends Component {
           });
           const lastNameRequired = validators.required(lastNameRequiredMessage);
 
+          const businessNameLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.businessName',
+          });
+
+          const businessNamePlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.businessNamePlaceholder',
+          });
+
+          const businessIRSNumberPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.businessIRSPlaceholder',
+          });
+          const businessStreetPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.businessStreetPlaceholder',
+          });
+          const businessCityPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.businessCityPlaceholder',
+          });
+          const businessStatePlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.businessStatePlaceholder',
+          });
+          const businessZipPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.businessZipPlaceholder',
+          });
+          
           // Bio
           const bioLabel = intl.formatMessage({
             id: 'ProfileSettingsForm.bioLabel',
@@ -300,10 +325,82 @@ class ProfileSettingsFormComponent extends Component {
                   label={bioLabel}
                   placeholder={bioPlaceholder}
                 />
+               
+              </div>
+
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <H4 as="h2" className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.becomeASeller" />
+                </H4>
+                <p><FormattedMessage id="ProfileSettingsForm.becomeASellerInstruction" /></p>
+                <FieldTextInput
+                    className={css.otherInputs}
+                    type="text"
+                    id="businessName"
+                    name="businessName"
+                    label={businessNameLabel}
+                    placeholder={businessNamePlaceholder}
+                   
+                  />
+
+                  <FieldTextInput
+                    className={css.otherInputs}
+                    type="text"
+                    id="businessName"
+                    name="businessName"
+                    label={businessIRSNumberPlaceholder}
+                    placeholder={businessIRSNumberPlaceholder}
+                    
+                  />
+
+                  <FieldTextInput
+                    className={css.otherInputs}
+                    type="text"
+                    id="businessStreet"
+                    name="businessStreet"
+                    label={businessStreetPlaceholder}
+                    placeholder={businessStreetPlaceholder}
+                   
+                  />
+
+                  <FieldTextInput
+                    className={css.otherInputs}
+                    type="text"
+                    id="businessCity"
+                    name="businessCity"
+                    label={businessCityPlaceholder}
+                    placeholder={businessCityPlaceholder}
+                   
+                  />
+
+                  <FieldTextInput
+                    className={css.otherInputs}
+                    type="text"
+                    id="businessState"
+                    name="businessState"
+                    label={businessStatePlaceholder}
+                    placeholder={businessStatePlaceholder}
+                    
+                  />
+
+                  <FieldTextInput
+                    className={css.otherInputs}
+                    type="text"
+                    id="businessState"
+                    name="businessState"
+                    label={businessStatePlaceholder}
+                    placeholder={businessStatePlaceholder}
+                   
+                  />
+
+               
                 <p className={css.bioInfo}>
                   <FormattedMessage id="ProfileSettingsForm.bioInfo" values={{ marketplaceName }} />
                 </p>
               </div>
+
+
+
               {submitError}
               <Button
                 className={css.submitButton}

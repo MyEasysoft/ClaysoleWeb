@@ -15,6 +15,7 @@ import TopbarContainer from '../../containers/TopbarContainer/TopbarContainer';
 import FooterContainer from '../../containers/FooterContainer/FooterContainer';
 
 import ContactDetailsForm from './ContactDetailsForm/ContactDetailsForm';
+import BusinessVerificationForm from './ContactDetailsForm/BusinessVerificationForm';
 
 import {
   saveContactDetails,
@@ -22,9 +23,12 @@ import {
   resetPassword,
 } from './ContactDetailsPage.duck';
 import css from './ContactDetailsPage.module.css';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+
 
 export const ContactDetailsPageComponent = props => {
   const {
+   
     saveEmailError,
     savePhoneNumberError,
     saveContactDetailsInProgress,
@@ -42,10 +46,16 @@ export const ContactDetailsPageComponent = props => {
     intl,
   } = props;
 
+  
+
   const user = ensureCurrentUser(currentUser);
   const currentEmail = user.attributes.email || '';
   const protectedData = user.attributes.profile.protectedData || {};
   const currentPhoneNumber = protectedData.phoneNumber || '';
+
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   const contactInfoForm = user.id ? (
     <ContactDetailsForm
       className={css.form}
@@ -65,6 +75,30 @@ export const ContactDetailsPageComponent = props => {
       resetPasswordError={resetPasswordError}
     />
   ) : null;
+
+  const businessVerificationForm = user.id ? (
+    <BusinessVerificationForm
+      className={css.form}
+      initialValues={{ email: currentEmail, phoneNumber: currentPhoneNumber }}
+      saveEmailError={saveEmailError}
+      savePhoneNumberError={savePhoneNumberError}
+      currentUser={currentUser}
+      onResendVerificationEmail={onResendVerificationEmail}
+      onResetPassword={onResetPassword}
+      onSubmit={values => onSubmitContactDetails({ ...values, currentEmail, currentPhoneNumber })}
+      onChange={onChange}
+      inProgress={saveContactDetailsInProgress}
+      ready={contactDetailsChanged}
+      sendVerificationEmailInProgress={sendVerificationEmailInProgress}
+      sendVerificationEmailError={sendVerificationEmailError}
+      resetPasswordInProgress={resetPasswordInProgress}
+      resetPasswordError={resetPasswordError}
+    />
+  ) : null;
+
+  const viewToShow = (currentPath==="/account/business")?businessVerificationForm:contactInfoForm;
+  const header = (currentPath==="/account/business")?"Verify your business":"Contact details";
+
 
   const title = intl.formatMessage({ id: 'ContactDetailsPage.title' });
 
@@ -88,9 +122,10 @@ export const ContactDetailsPageComponent = props => {
       >
         <div className={css.content}>
           <H3 as="h1">
-            <FormattedMessage id="ContactDetailsPage.heading" />
+            <FormattedMessage id={header} />
           </H3>
-          {contactInfoForm}
+          
+          {viewToShow}
         </div>
       </LayoutSideNavigation>
     </Page>

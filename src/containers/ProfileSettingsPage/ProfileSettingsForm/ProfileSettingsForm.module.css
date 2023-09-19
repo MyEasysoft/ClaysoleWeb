@@ -263,6 +263,11 @@
   width: calc(66% - 9px);
 }
 
+.otherInputs {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .bioInfo {
   composes: textSmall from global;
   color: var(--colorGrey300);

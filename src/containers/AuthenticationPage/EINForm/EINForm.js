@@ -11,7 +11,7 @@ import { Form, PrimaryButton, FieldTextInput, FieldCheckbox, FieldRadioButton, F
 
 import css from './SignupForm.module.css';
 
-const SignupFormComponent = props => (
+const EINFormComponent = props => (
   <FinalForm
     {...props}
     mutators={{ ...arrayMutators }}
@@ -265,7 +265,7 @@ SignupFormComponent.propTypes = {
   intl: intlShape.isRequired,
 };
 
-const SignupForm = compose(injectIntl)(SignupFormComponent);
-SignupForm.displayName = 'SignupForm';
+const EINForm = compose(injectIntl)(EINFormComponent);
+EINForm.displayName = 'EINForm';
 
-export default SignupForm;
+export default EINForm;

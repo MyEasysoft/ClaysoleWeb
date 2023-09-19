@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import isEqual from 'lodash/isEqual';
 import classNames from 'classnames';
 import { Form as FinalForm } from 'react-final-form';
 
 import { FormattedMessage, injectIntl, intlShape } from '../../../util/reactIntl';
-import { propTypes } from '../../../util/types';
 import * as validators from '../../../util/validators';
 import { ensureCurrentUser } from '../../../util/data';
 import {
@@ -23,11 +21,11 @@ import {
   H4,
 } from '../../../components';
 
-import css from './ContactDetailsForm.module.css';
+import css from '../BusinessVerification.module.css';
 
 const SHOW_EMAIL_SENT_TIMEOUT = 2000;
 
-class ContactDetailsFormComponent extends Component {
+class BusinessVerificationFormComponent extends Component {
   constructor(props) {
     super(props);
     this.state = { showVerificationEmailSentMessage: false, showResetPasswordMessage: false };
@@ -82,15 +80,7 @@ class ContactDetailsFormComponent extends Component {
           const { email, phoneNumber } = values;
 
           const user = ensureCurrentUser(currentUser);
-
-          if (!user.id) {
-            return null;
-          }
-
-          const { email: currentEmail, emailVerified, pendingEmail, profile } = user.attributes;
-
-          // email
-
+          
           // has the email changed
           const emailChanged = currentEmail !== email;
 
@@ -108,35 +98,6 @@ class ContactDetailsFormComponent extends Component {
             id: 'ContactDetailsForm.emailInvalid',
           });
           const emailValid = validators.emailFormatValid(emailInvalidMessage);
-
-
-
-
-          //Business
-          const businessNameLabel = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessName',
-          });
-
-          const businessNamePlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessNamePlaceholder',
-          });
-
-          const businessIRSNumberPlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessIRSPlaceholder',
-          });
-          const businessStreetPlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessStreetPlaceholder',
-          });
-          const businessCityPlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessCityPlaceholder',
-          });
-          const businessStatePlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessStatePlaceholder',
-          });
-          const businessZipPlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessZipPlaceholder',
-          });
-
 
           const tooManyVerificationRequests = isTooManyEmailVerificationRequestsError(
             sendVerificationEmailError
@@ -338,8 +299,7 @@ class ContactDetailsFormComponent extends Component {
             !(emailChanged || phoneNumberChanged);
 
           return (
-           
-             <Form
+            <Form
               className={classes}
               onSubmit={e => {
                 this.submittedValues = values;
@@ -391,7 +351,6 @@ class ContactDetailsFormComponent extends Component {
                   customErrorText={passwordTouched ? null : passwordErrorText}
                 />
               </div>
-
               <div className={css.bottomWrapper}>
                 {genericError}
                 <PrimaryButton
@@ -404,7 +363,6 @@ class ContactDetailsFormComponent extends Component {
                 </PrimaryButton>
               </div>
             </Form>
-           
           );
         }}
       />
@@ -412,41 +370,10 @@ class ContactDetailsFormComponent extends Component {
   }
 }
 
-ContactDetailsFormComponent.defaultProps = {
-  rootClassName: null,
-  className: null,
-  formId: null,
-  saveEmailError: null,
-  savePhoneNumberError: null,
-  inProgress: false,
-  sendVerificationEmailError: null,
-  sendVerificationEmailInProgress: false,
-  email: null,
-  phoneNumber: null,
-  resetPasswordInProgress: false,
-  resetPasswordError: null,
-};
 
-const { bool, func, string } = PropTypes;
 
-ContactDetailsFormComponent.propTypes = {
-  rootClassName: string,
-  className: string,
-  formId: string,
-  saveEmailError: propTypes.error,
-  savePhoneNumberError: propTypes.error,
-  inProgress: bool,
-  intl: intlShape.isRequired,
-  onResendVerificationEmail: func.isRequired,
-  ready: bool.isRequired,
-  sendVerificationEmailError: propTypes.error,
-  sendVerificationEmailInProgress: bool,
-  resetPasswordInProgress: bool,
-  resetPasswordError: propTypes.error,
-};
+const BusinessVerificationForm = compose(injectIntl)(BusinessVerificationFormComponent);
 
-const ContactDetailsForm = compose(injectIntl)(ContactDetailsFormComponent);
+BusinessVerificationForm.displayName = 'BusinessVerificationForm';
 
-ContactDetailsForm.displayName = 'ContactDetailsForm';
-
-export default ContactDetailsForm;
+export default BusinessVerificationForm;

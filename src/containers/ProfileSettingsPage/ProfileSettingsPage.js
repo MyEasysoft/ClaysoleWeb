@@ -64,6 +64,7 @@ export const ProfileSettingsPageComponent = props => {
   };
 
   const user = ensureCurrentUser(currentUser);
+  console.log("cccccccccccccccccccccccccccccccccccccccccccccccccc          "+user );
   const { firstName, lastName, bio } = user.attributes.profile;
   const profileImageId = user.profileImage ? user.profileImage.id : null;
   const profileImage = image || { imageId: profileImageId };

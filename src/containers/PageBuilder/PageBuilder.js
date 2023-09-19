@@ -11,6 +11,8 @@ import StaticPage from './StaticPage.js';
 
 import css from './PageBuilder.module.css';
 import LandingPageMainComponent from '../../components/LandingPageMain/LandingPageMain.js';
+import SellerInstructionComponent from '../../components/LandingPageMain/SellerInstructionPage.js';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min.js';
 
 const getMetadata = (meta, schemaType, fieldOptions) => {
   const { pageTitle, pageDescription, socialSharing } = meta;
@@ -101,6 +103,15 @@ const PageBuilder = props => {
   // - "meta" (which is data that goes inside <head>)
   const { sections = [], meta = {} } = pageAssetsData || {};
   const pageMetaProps = getMetadata(meta, schemaType, options?.fieldComponents);
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const viewToShow = (currentPath==="/account/seller-instruction")?<SellerInstructionComponent />:<LandingPageMainComponent />;
+
+
+
+
+  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq    "+location.pathname);
 
   const layoutAreas = `
     topbar
@@ -117,8 +128,7 @@ const PageBuilder = props => {
               <Topbar as="header">
                 <TopbarContainer />
               </Topbar>
-
-              <LandingPageMainComponent />
+              {viewToShow}
               <Main as="main" className={css.main}>
                 {sections.length === 0 && inProgress ? (
                   <LoadingSpinner />
