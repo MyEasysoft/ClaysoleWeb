@@ -11,6 +11,9 @@
       margin: 0px;
       
     }
+    .instructionBg{
+      background-image: url('../../assets/busiBg.jpg');
+    }
 
     .container{
         position: relative;
@@ -380,6 +383,13 @@
     }
     .magR5{
       margin-right: 50px;
+    }
+    .textWhite{
+      color: white;
+    }
+
+    .textRed{
+      color: rgb(98, 46, 0);
     }
 
   

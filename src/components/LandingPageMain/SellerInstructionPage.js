@@ -14,25 +14,25 @@ function SellerInstructionComponent(){
 
   return (
     <>
-       <div className={css.container +' '+ css.textCenter}>
-		<div className={css.col12 +" "+ css.magB3}>
-			<h4 className={css.magB2}>How to become a Seller on Claysole</h4>
-			<h1>Please follow the steps below to register as one of our sellers.</h1>
-		</div>
-		<div className={css.row}>
-			
-			
-			<div className={classNames(css.col5,css.textLeft)}>
-				<ol>
-                    <li>Firstly you need to create a normal user account on Claysole.</li>
-                    <li>Then, login to your user dashboard with your email and password.</li>
-                    <li>Click on the profile icon button on the top right corner and select "Become a Seller" from the dropdown menu</li>
-                    <li>Supply the required information to verify your business information</li>
-                </ol>
-			</div>
-			
-		</div>
-	</div>
+       <div className={classNames(css.container,css.textCenter,css.instructionBg) }>
+          <div className={css.col12 +" "+ css.magB3}>
+            <h3 className={classNames( css.magB2,css.textRed)}>How to become a Seller on Claysole</h3>
+            <h1 className={css.textWhite}>Please follow the steps below to register as one of our sellers.</h1>
+          </div>
+          <div className={css.row}>
+            
+            
+            <div className={classNames(css.col5,css.textLeft,css.textWhite)}>
+              <ol>
+                          <li>Firstly you need to create a normal user account on Claysole.</li>
+                          <li>Then, login to your user dashboard with your email and password.</li>
+                          <li>Click on the profile icon button on the top right corner and select "Become a Seller" from the dropdown menu</li>
+                          <li>Supply the required information to verify your business information</li>
+                      </ol>
+            </div>
+            
+          </div>
+        </div>
 
 	
 

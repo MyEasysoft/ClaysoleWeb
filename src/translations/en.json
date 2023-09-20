@@ -639,6 +639,7 @@
   "ProfileSettingsForm.businessAddressState": "Your business address state",
   "ProfileSettingsForm.businessAddressZip": "Your business address zip",
   "ProfileSettingsForm.businessNamePlaceholder": "Your business name",
+  "ProfileSettingsForm.businessEIN": "Your EIN number",
   "ProfileSettingsForm.businessIRSPlaceholder": "Your business IRS number",
   "ProfileSettingsForm.businessStreetPlaceholder": "Your business address street",
   "ProfileSettingsForm.businessCityPlaceholder": "Your business address city",

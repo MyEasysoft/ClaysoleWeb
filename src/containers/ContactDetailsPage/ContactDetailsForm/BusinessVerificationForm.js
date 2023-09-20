@@ -117,26 +117,11 @@ class ContactDetailsFormComponent extends Component {
             id: 'ProfileSettingsForm.businessName',
           });
 
-          const businessNamePlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessNamePlaceholder',
+          const businessEINPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.businessEIN',
           });
 
-          const businessIRSNumberPlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessIRSPlaceholder',
-          });
-          const businessStreetPlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessStreetPlaceholder',
-          });
-          const businessCityPlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessCityPlaceholder',
-          });
-          const businessStatePlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessStatePlaceholder',
-          });
-          const businessZipPlaceholder = intl.formatMessage({
-            id: 'ProfileSettingsForm.businessZipPlaceholder',
-          });
-
+         
 
           const tooManyVerificationRequests = isTooManyEmailVerificationRequestsError(
             sendVerificationEmailError
@@ -354,75 +339,15 @@ class ContactDetailsFormComponent extends Component {
                                 <FieldTextInput
                                     className={css.otherInputs}
                                     type="text"
-                                    id="businessName"
-                                    name="businessName"
-                                    label={businessNameLabel}
-                                    placeholder={businessNamePlaceholder}
+                                    id="businessEIN"
+                                    name="businessEIN"
+                                    label={businessEINPlaceholder}
+                                    placeholder={businessEINPlaceholder}
                                   
                                   />
 
-                                  <FieldTextInput
-                                    className={css.otherInputs}
-                                    type="text"
-                                    id="businessName"
-                                    name="businessName"
-                                    label={businessIRSNumberPlaceholder}
-                                    placeholder={businessIRSNumberPlaceholder}
-                                    
-                                  />
-
-                                  <FieldTextInput
-                                    className={css.otherInputs}
-                                    type="text"
-                                    id="businessStreet"
-                                    name="businessStreet"
-                                    label={businessStreetPlaceholder}
-                                    placeholder={businessStreetPlaceholder}
-                                  
-                                  />
-
-                                  <FieldTextInput
-                                    className={css.otherInputs}
-                                    type="text"
-                                    id="businessCity"
-                                    name="businessCity"
-                                    label={businessCityPlaceholder}
-                                    placeholder={businessCityPlaceholder}
-                                  
-                                  />
-
-                                  <FieldTextInput
-                                    className={css.otherInputs}
-                                    type="text"
-                                    id="businessState"
-                                    name="businessState"
-                                    label={businessStatePlaceholder}
-                                    placeholder={businessStatePlaceholder}
-                                    
-                                  />
-
-                                  <FieldTextInput
-                                    className={css.otherInputs}
-                                    type="text"
-                                    id="businessState"
-                                    name="businessState"
-                                    label={businessStatePlaceholder}
-                                    placeholder={businessStatePlaceholder}
-                                  
-                                  />
-
-                              
-                                <p className={css.bioInfo}>
-                                  <FormattedMessage id="ProfileSettingsForm.bioInfo" values='Claysole' />
-                                </p>
+                               
                               </div>
-
-
-
-
-
-
-
 
                               <div className={css.bottomWrapper}>
                                 {genericError}
