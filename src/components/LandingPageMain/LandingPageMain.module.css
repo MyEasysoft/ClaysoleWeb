@@ -375,5 +375,11 @@
     .textLeft{
       text-align: left;
     }
+    .magL5{
+      margin-left: 50px;
+    }
+    .magR5{
+      margin-right: 50px;
+    }
 
   

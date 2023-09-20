@@ -245,8 +245,8 @@ const TopbarDesktop = props => {
   return (
       <div>
         <section>
-          <nav className={overlay +" " +classes}>
-            <div>
+          <nav className={classNames( overlay,classes)}>
+            <div className={csss.magL5}>
                 <LinkedLogo
                   format="desktop"
                   alt={intl.formatMessage({ id: 'TopbarDesktop.logo' }, { marketplaceName })}
@@ -260,7 +260,7 @@ const TopbarDesktop = props => {
             <div className={csss.menuCol}>
              
            
-              <div className={csss.iconRow}>
+              <div className={classNames(csss.magR5, csss.iconRow)}>
                 {newListLink}
                 {inboxLink}
                 {profileMenu}
