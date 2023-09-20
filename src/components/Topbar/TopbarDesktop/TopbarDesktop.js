@@ -227,7 +227,7 @@ const TopbarDesktop = props => {
   const location = useLocation();
   const path = location.pathname;
 
-  const newListLink = (path==="/" || path==="/login" || path==="/account/seller-instruction")?"":
+  const newListLink = (path==="/" || path==="/login" || path==="/account/seller-instruction" || path==="/signup")?"":
     <NamedLink className={css.createListingLink} name="NewListingPage">
       <span className={css.createListing}>
         <FormattedMessage id="TopbarDesktop.createListing" />
