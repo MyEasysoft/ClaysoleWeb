@@ -106,7 +106,9 @@ const PageBuilder = props => {
   const location = useLocation();
   const currentPath = location.pathname;
 
+ 
   const viewToShow = (currentPath==="/account/seller-instruction")?<SellerInstructionComponent />:<LandingPageMainComponent />;
+  const viewToShowBanner = (currentPath==="/account/seller-instruction")?"":<LandingPageMainComponent />;
 
 
 
@@ -129,13 +131,16 @@ const PageBuilder = props => {
                 <TopbarContainer />
               </Topbar>
               {viewToShow}
+
+              {(currentPath==="/account/seller-instruction")?"":
               <Main as="main" className={css.main}>
                 {sections.length === 0 && inProgress ? (
                   <LoadingSpinner />
                 ) : (
                   <SectionBuilder sections={sections} options={options} />
                 )}
-              </Main>
+              </Main>}
+              
               <FooterContainer />
             </>
           );

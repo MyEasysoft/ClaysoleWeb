@@ -23,6 +23,7 @@ import csss from '../../../components/LandingPageMain/LandingPageMain.module.css
 import bg from '../../../assets/pic2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faBell, faSignIn, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 const TopbarDesktop = props => {
   const {
@@ -64,6 +65,12 @@ const TopbarDesktop = props => {
       appConfig={appConfig}
     />
   );
+
+
+
+  const handleSearchClick = ()=>{
+
+  };
 
   const notificationDot = notificationCount > 0 ? <div className={css.notificationDot} /> : null;
 
@@ -201,8 +208,7 @@ const TopbarDesktop = props => {
 
   const menuIcons = isAuthenticatedOrJustHydrated ? null : (
     <div className={csss.padsmall}>
-              <FontAwesomeIcon className={csss.icon} icon={faMagnifyingGlass} />
-              <FontAwesomeIcon className={csss.icon} icon={faBell} />
+              <FontAwesomeIcon onClick={handleSearchClick} className={csss.icon} icon={faMagnifyingGlass} />
               <FontAwesomeIcon className={csss.icon} icon={faSignIn} />
             </div>
   );
@@ -215,11 +221,24 @@ const TopbarDesktop = props => {
     </div>
   );
 
+
+  
+
+  const location = useLocation();
+  const path = location.pathname;
+
+  const newListLink = (path==="/" || path==="/login" || path==="/account/seller-instruction")?"":
+    <NamedLink className={css.createListingLink} name="NewListingPage">
+      <span className={css.createListing}>
+        <FormattedMessage id="TopbarDesktop.createListing" />
+      </span>
+    </NamedLink>
+  ;
+
   let overlayStyle = csss.navMain;
   let normalStyle = csss.navMainNoOverlay;
-  let overlay = (currentPage==null)?overlayStyle:normalStyle;
-  (currentPage==null)?overlayStyle:normalStyle;
-
+  let overlay = (path==="/")?overlayStyle:normalStyle;
+ 
   console.log(profileMenuContainer.toString()+"-------------------------------------------------------------");
 
 
@@ -233,20 +252,16 @@ const TopbarDesktop = props => {
                   alt={intl.formatMessage({ id: 'TopbarDesktop.logo' }, { marketplaceName })}
                 />
             </div>
+            {search}
             <div className="links">
-             
-              {menLink}
-              {womenLink}
-              {kidsLink}
-              {accesoriesLink}
               {loginLink}
               {becomeASellerLink}
-             
             </div>
             <div className={csss.menuCol}>
-              {menuIcons}
+             
            
               <div className={csss.iconRow}>
+                {newListLink}
                 {inboxLink}
                 {profileMenu}
               </div>
