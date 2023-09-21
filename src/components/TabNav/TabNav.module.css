@@ -41,9 +41,16 @@
   background-image: url("data:image/svg+xml;utf8,<svg width='4' height='32' viewBox='0 0 4 32' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h4v32H0z' fill='%234a4a4a' fill-rule='evenodd'/></svg>");
   background-position: calc(var(--TabNav_linkWidth) + 4px) center; /* SelectedLink's width (200px) + border thickness (4px) = 204px */
 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e2e2e2;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 5px;
+  
   &:hover {
     text-decoration: none;
     color: var(--colorBlack);
+    box-shadow: 0px 0px 5px 1px;
   }
 
   @media (--viewportLarge) {
@@ -57,8 +64,8 @@
     margin-top: 0;
     margin-bottom: 16px;
 
-    padding-top: 5px; /* Drop the text to adjust it to correct baseline */
-    padding-bottom: 3px;
+    padding-top: 10px; /* Drop the text to adjust it to correct baseline */
+    padding-bottom: 10px;
 
     &:hover {
       background-image: url("data:image/svg+xml;utf8,<svg width='4' height='32' viewBox='0 0 4 32' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h4v32H0z' fill='%234a4a4a' fill-rule='evenodd'/></svg>");

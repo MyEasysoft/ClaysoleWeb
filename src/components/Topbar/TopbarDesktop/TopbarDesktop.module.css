@@ -129,10 +129,11 @@
   height: 100%;
   padding: 0 12px 0 12px;
   margin: 0;
+  
 
   &:hover {
     
-    border-bottom: 4px solid var(--marketplaceColor);
+    border-bottom: 4px solid var(--colorWhite);
     border-radius: 0;
     text-decoration: none;
   }
@@ -146,6 +147,7 @@
 .inbox {
   composes: topbarDesktopLabel;
   position: relative;
+
 }
 
 .notificationDot {
@@ -267,6 +269,10 @@
   display: inline-block;
   margin: 28px 0;
   text-decoration: inherit;
+  border-style: solid;
+  border-width: thin;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* left animated "border" like hover element */

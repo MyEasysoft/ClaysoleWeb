@@ -254,8 +254,8 @@ const TopbarDesktop = props => {
             </div>
             {search}
             <div className="links">
-              {loginLink}
               {becomeASellerLink}
+              {loginLink}
             </div>
             <div className={csss.menuCol}>
              

@@ -328,78 +328,7 @@ class ProfileSettingsFormComponent extends Component {
                
               </div>
 
-              <div className={classNames(css.sectionContainer, css.lastSection)}>
-                <H4 as="h2" className={css.sectionTitle}>
-                  <FormattedMessage id="ProfileSettingsForm.becomeASeller" />
-                </H4>
-                <p><FormattedMessage id="ProfileSettingsForm.becomeASellerInstruction" /></p>
-                <FieldTextInput
-                    className={css.otherInputs}
-                    type="text"
-                    id="businessName"
-                    name="businessName"
-                    label={businessNameLabel}
-                    placeholder={businessNamePlaceholder}
-                   
-                  />
-
-                  <FieldTextInput
-                    className={css.otherInputs}
-                    type="text"
-                    id="businessName"
-                    name="businessName"
-                    label={businessIRSNumberPlaceholder}
-                    placeholder={businessIRSNumberPlaceholder}
-                    
-                  />
-
-                  <FieldTextInput
-                    className={css.otherInputs}
-                    type="text"
-                    id="businessStreet"
-                    name="businessStreet"
-                    label={businessStreetPlaceholder}
-                    placeholder={businessStreetPlaceholder}
-                   
-                  />
-
-                  <FieldTextInput
-                    className={css.otherInputs}
-                    type="text"
-                    id="businessCity"
-                    name="businessCity"
-                    label={businessCityPlaceholder}
-                    placeholder={businessCityPlaceholder}
-                   
-                  />
-
-                  <FieldTextInput
-                    className={css.otherInputs}
-                    type="text"
-                    id="businessState"
-                    name="businessState"
-                    label={businessStatePlaceholder}
-                    placeholder={businessStatePlaceholder}
-                    
-                  />
-
-                  <FieldTextInput
-                    className={css.otherInputs}
-                    type="text"
-                    id="businessState"
-                    name="businessState"
-                    label={businessStatePlaceholder}
-                    placeholder={businessStatePlaceholder}
-                   
-                  />
-
-               
-                <p className={css.bioInfo}>
-                  <FormattedMessage id="ProfileSettingsForm.bioInfo" values={{ marketplaceName }} />
-                </p>
-              </div>
-
-
+             
 
               {submitError}
               <Button

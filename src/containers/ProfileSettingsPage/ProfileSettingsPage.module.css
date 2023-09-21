@@ -6,10 +6,19 @@
 .content {
   width: calc(100% - 48px);
   margin: 12px 24px 24px 24px;
+  box-shadow: 0px 0px 10px 1px gray;
+  padding: 40px;
+  border-radius: 10px;
+  transition: 1s;
 
   @media (--viewportMedium) {
     max-width: 565px;
     margin: 55px auto 56px auto;
+    
+  }
+
+  &:hover{
+    box-shadow: 0px 0px 10px 1px rgb(202, 202, 202);
   }
 }
 

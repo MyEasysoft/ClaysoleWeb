@@ -37,7 +37,6 @@ export const BusinessVerificationComponent = props => {
       } = props;
     
       const user = ensureCurrentUser(currentUser);
-      console.log("ooooooooooooooooooooooooooooooooooooooooo     "+user);
       const currentEmail = user.attributes.email || '';
       const protectedData = user.attributes.profile.protectedData || {};
       const currentPhoneNumber = protectedData.phoneNumber || '';
