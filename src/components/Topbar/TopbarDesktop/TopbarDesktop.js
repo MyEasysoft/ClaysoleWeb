@@ -227,7 +227,7 @@ const TopbarDesktop = props => {
   const location = useLocation();
   const path = location.pathname;
 
-  const newListLink = (path==="/" || path==="/login" || path==="/account/seller-instruction" || path==="/signup")?"":
+  const newListLink = (path==="/" || path==="/login" || path==="/account/seller-instruction" || path==="/signup" || path==="/s")?"":
     <NamedLink className={css.createListingLink} name="NewListingPage">
       <span className={css.createListing}>
         <FormattedMessage id="TopbarDesktop.createListing" />
@@ -267,16 +267,15 @@ const TopbarDesktop = props => {
               </div>
             </div>
             
-           
           </nav>
 
-        
-          <section className={csss.floatingButtonstyle}>
-            <div className={csss.floatingButton}>
-              <img className={csss.captionimg} src={bg}/>
-            </div>
-          </section>
-         
+         {(path==="/")?
+            <section className={csss.floatingButtonstyle}>
+                <div className={csss.floatingButton}>
+                  <img className={csss.captionimg} src={bg}/>
+                </div>
+              </section>:""
+          }
          
         </section>
 
