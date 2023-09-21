@@ -14,7 +14,7 @@ function SellerInstructionComponent(){
 
   return (
     <>
-       <div className={classNames(css.container,css.textCenter,css.instructionBg) }>
+       <div className={classNames(css.container,css.textCenter,css.instructionBg,css.padT150) }>
           <div className={css.col12 +" "+ css.magB3}>
             <h3 className={classNames( css.magB2,css.textRed)}>How to become a Seller on Claysole</h3>
             <h1 className={css.textWhite}>Please follow the steps below to register as one of our sellers.</h1>

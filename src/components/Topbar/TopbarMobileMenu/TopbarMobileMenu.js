@@ -29,14 +29,20 @@ const TopbarMobileMenu = props => {
 
   if (!isAuthenticated) {
     const signup = (
-      <NamedLink name="SignupPage" className={css.signupLink}>
+      <NamedLink name="SignupPage" className={classNames(css.signupLink,css.links1) }>
         <FormattedMessage id="TopbarMobileMenu.signupLink" />
       </NamedLink>
     );
 
     const login = (
-      <NamedLink name="LoginPage" className={css.loginLink}>
+      <NamedLink name="LoginPage" className={classNames(css.signupLink,css.links1) }>
         <FormattedMessage id="TopbarMobileMenu.loginLink" />
+      </NamedLink>
+    );
+
+    const becomeASeller = (
+      <NamedLink name="SellerInstructionPage" className={classNames(css.signupLink,css.links1) }>
+        <FormattedMessage id="TopbarMobileMenu.becomeASellerLink" />
       </NamedLink>
     );
 
@@ -49,10 +55,13 @@ const TopbarMobileMenu = props => {
       <div className={css.root}>
         <div className={css.content}>
           <div className={css.authenticationGreeting}>
-            <FormattedMessage
-              id="TopbarMobileMenu.unauthorizedGreeting"
-              values={{ lineBreak: <br />, signupOrLogin }}
-            />
+            <h2>Hi there!</h2>
+           {signup}
+           <br/>
+           {login}
+           <br/>
+           {becomeASeller}
+          
           </div>
         </div>
         <div className={css.footer}>

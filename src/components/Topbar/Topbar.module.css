@@ -16,11 +16,11 @@
   /* Layout for child components */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: stretch;
   align-items: center;
 
   /* fill */
-  background-color: var(--colorWhite);
+  background-color: black;
 
   /* shadows */
   box-shadow: none;
@@ -126,6 +126,15 @@
 }
 .rootSearchIcon {
   stroke: var(--colorGrey700);
+  transition: 1s;
+
+  @media screen and (max-width: 480px) {
+    translate: 150px
+  }
+  @media screen and (max-width: 768px) {
+    translate: 370px
+  }
+ 
 }
 
 .searchContainer {

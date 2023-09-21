@@ -13,6 +13,16 @@
     }
     .instructionBg{
       background-image: url('../../assets/busiBg.jpg');
+      height: 100vh;
+      align-items: center;
+      
+      @media screen and (max-width: 480px) {
+        height: 70vh;
+      }
+      @media screen and (max-width: 768px) {
+        height: 70vh;
+      }
+
     }
 
     .container{
@@ -40,32 +50,91 @@
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
+        @media screen and (max-width: 480px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
     }
     .col3{
         position: relative;
         float: left;
         width: 25%;
+        @media screen and (max-width: 480px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
     }
     .col4{
         position: relative;
         float: left;
         width: 33.3%;
+        @media screen and (max-width: 480px) {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+       
     }
     .col5{
         position: relative;
         float: left;
         width: 41.6%;
+        @media screen and (max-width: 480px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
     }
+    .col5 p{
+     
+      @media screen and (max-width: 768px) {
+        
+        margin: 10px;
+      }
+  }
     .col6{
         position: relative;
         float: left;
         width: 50%;
+        @media screen and (max-width: 768px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+        }
     }
 
     .col12{
         position: relative;
         float: left;
         width: 100%;
+        @media screen and (max-width: 768px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+          margin-top: 20px;
+        }
     }
 
     .textCenter{
@@ -81,12 +150,28 @@
     }
     .pad3{
         padding: 30px;
+        @media screen and (max-width: 768px) {
+          
+         padding: 0px;
+        }
     }
     .pad4{
         padding: 40px;
     }
     .pad4{
         padding: 50px;
+    }
+    .padT100{
+      padding-top: 100px;
+    }
+    .padT150{
+      padding-top: 150px;
+      @media screen and (max-width: 480px) {
+        padding-top: 40px;
+      }
+      @media screen and (max-width: 768px) {
+        padding-top: 100px;
+      }
     }
 
     .magB1{
@@ -107,6 +192,12 @@
         border-radius: 10px;
         padding-top: 7px;
         margin-bottom: 10px;
+        @media screen and (max-width: 480px) {
+          
+          width: 100%;
+          margin-bottom: 20px;
+          padding-left: 10px;
+        }
     }
     .badge2{
         display: flex;
@@ -116,6 +207,12 @@
          border-radius: 10px;
          padding-top: 7px;
          color: rgb(137, 137, 137);
+         @media screen and (max-width: 480px) {
+         
+          width: 100%;
+          margin-bottom: 20px;
+          
+        }
      }
 
 
@@ -259,6 +356,11 @@
       height: auto;
       border-style: solid;
       border-color: rgb(194, 194, 194);
+      @media screen and (min-width: 300px) {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
     
     p{
@@ -269,6 +371,10 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
+      @media screen and (min-width: 300px) {
+       
+        margin-right: 10px;
+      }
     }
     .circleImg2{
       width: 70px;
@@ -276,6 +382,10 @@
       border-style: dashed;
       border-color: rgb(183, 183, 183);
       border-radius: 50%;
+      @media screen and (min-width: 300px) {
+       
+        
+      }
     }
   
     .img-badges{
@@ -386,10 +496,10 @@
     }
     .textWhite{
       color: white;
-    }
-
+    }s
+      
     .textRed{
-      color: rgb(98, 46, 0);
+      color: rgb(64, 38, 15);
     }
 
   

@@ -20,6 +20,11 @@
   @media (--viewportMedium) {
     padding: 64px 0;
   }
+  @media screen and (max-width: 480px) {
+    
+    height: 40vh;
+    
+  }
 }
 
 .backgroundImageWrapper {
