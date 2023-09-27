@@ -113,8 +113,7 @@ const PageBuilder = props => {
 
 
 
-  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq    "+location.pathname);
-
+ 
   const layoutAreas = `
     topbar
     main

@@ -41,6 +41,8 @@ const SearchPageWithGrid = loadable(() => import(/* webpackChunkName: "SearchPag
 const StripePayoutPage = loadable(() => import(/* webpackChunkName: "StripePayoutPage" */ '../containers/StripePayoutPage/StripePayoutPage'));
 const TermsOfServicePage = loadable(() => import(/* webpackChunkName: "TermsOfServicePage" */ '../containers/TermsOfServicePage/TermsOfServicePage'));
 const TransactionPage = loadable(() => import(/* webpackChunkName: "TransactionPage" */ '../containers/TransactionPage/TransactionPage'));
+const UserPage = loadable(() => import(/* webpackChunkName: "UserPage" */ '../containers/UserDashboard/UserPage'));
+const VendorPage = loadable(() => import(/* webpackChunkName: "VendorPage" */ '../containers/VendorDashboard/VendorPage'));
 
 // Styleguide helps you to review current components and develop new ones
 const StyleguidePage = loadable(() => import(/* webpackChunkName: "StyleguidePage" */ '../containers/StyleguidePage/StyleguidePage'));
@@ -178,6 +180,24 @@ const routeConfiguration = (layoutConfig) => {
       authPage: 'LoginPage',
       component: ProfileSettingsPage,
     },
+
+    {
+      path: '/user-page',
+      name: 'UserPage',
+      auth: false,
+      authPage: 'LoginPage',
+      component: UserPage,
+    },
+    {
+      path: '/vendor-page',
+      name: 'VendorPage',
+      auth: false,
+      authPage: 'LoginPage',
+      component: VendorPage,
+    },
+    
+
+    
 
     // Note: authenticating with IdP (e.g. Facebook) expects that /login path exists
     // so that in the error case users can be redirected back to the LoginPage
