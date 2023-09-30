@@ -141,6 +141,11 @@
   "DisputeModal.sentTitle": "Dispute report sent",
   "DisputeModal.submit": "Dispute order",
   "DisputeModal.title": "Did something go wrong?",
+  "DeleteAccountPage.details": "This action is permanent and cannot be undone! After deleting your account, you will be logged out immediately and will not be able to access your listings or transactions anymore.",
+"DeleteAccountPage.heading": "Delete your account",
+"DeleteAccountPage.title": "Delete your account",
+"DeleteAccountPage.error": "Cannot delete user profile. You have {errorCause} Please contact Biketribe support or complete the unfinished issues and try again.",
+"LayoutWrapperAccountSettingsSideNav.deleteAccountTabTitle": "Delete account",
   "EditListingAvailabilityExceptionForm.addException": "Save exception",
   "EditListingAvailabilityExceptionForm.available": "Available",
   "EditListingAvailabilityExceptionForm.exceptionEndDateLabel": "Ends",
@@ -736,6 +741,8 @@
   "SignupForm.passwordTooLong": "The password can't be longer than {maxLength} characters.",
   "SignupForm.passwordTooShort": "The password should be at least {minLength} characters.",
   "SignupForm.signUp": "Sign up",
+  "SignupForm.SellerRole": "Seller",
+  "SignupForm.VendorRole": "Vendor",
   "SortBy.heading": "Sort by",
   "SortBy.newest": "Newest",
   "SortBy.oldest": "Oldest",
@@ -933,7 +940,7 @@
   "Topbar.menuIcon": "Open menu",
   "Topbar.mobileSearchHelp": "Find what you are looking for.",
   "Topbar.searchIcon": "Open search",
-  "TopbarDesktop.accountSettingsLink": "Account settings",
+  "TopbarDesktop.accountSettingsLink": "Dashboard",
   "TopbarDesktop.BusinessVerification": "Verify your business",
   "TopbarDesktop.verifyBusinessPage": "Verify Business",
   "TopbarMobileMenu.verifyBusinessPage": "Verify Business",
@@ -947,7 +954,7 @@
   "TopbarDesktop.profileSettingsLink": "Profile settings",
   "TopbarDesktop.signup": "Sign up",
   "TopbarDesktop.yourListingsLink": "Your listings",
-  "TopbarMobileMenu.accountSettingsLink": "Account settings",
+  "TopbarMobileMenu.accountSettingsLink": "Dashboard",
   "TopbarMobileMenu.greeting": "Hello {displayName}",
   "TopbarMobileMenu.inboxLink": "Inbox",
   "TopbarMobileMenu.becomeASellerLink": "Become a Seller",
@@ -1089,7 +1096,7 @@
   "UserCard.viewProfileLink": "View profile",
   "UserDisplayName.banned": "Banned user",
   "UserDisplayName.deleted": "Deleted user",
-  "UserNav.accountSettings": "Account settings",
+  "UserNav.accountSettings": "Dashboard",
   "UserNav.profileSettings": "Profile settings",
   "UserNav.yourListings": "Your listings",
   "SignupForm.phoneLabel": "Phone number",
@@ -1109,10 +1116,76 @@
   "SignupForm.shippingAdrRequired":"Your shipping address is required",
   "SignupForm.ageLabel":"I'm 18 years or above",
   "SignupForm.vendorLabel":"Vendor",
-  "SignupForm.sellerLabel":"Seller"
+  "SignupForm.sellerLabel":"Seller",
   
+  "SalesAccountPage.details": "This is a breakdown of the Sales data",
+  "SalesAccountPage.heading": "View Sales",
+  "SalesAccountPage.title": "View Sales",
+  "SalesAccountPage.error": "Error getting sales data",
+  "LayoutWrapperAccountSettingsSideNav.SalesTabTitle": "Sales",
   
+
+  "SEOPage.details": "Search Engine Uptimisation",
+  "SEOPage.heading": "SEO Setting",
+  "SEOPage.title": "SEO Setting",
+  "SEOPage.error": "Error getting SEO data",
+  "LayoutWrapperAccountSettingsSideNav.SEOTabTitle": "SEO",
   
+  "AdsPage.details": "Search Engine Uptimisation",
+  "AdsPage.heading": "Ads setting",
+  "AdsPage.title": "Ads setting",
+  "AdsPage.error": "Error getting Ads data",
+  "LayoutWrapperAccountSettingsSideNav.AdsTabTitle": "My ads",
+  
+  "RefundsPage.details": "List of refunded transactions",
+  "RefundsPage.heading": "Refunds",
+  "RefundsPage.title": "Refunds",
+  "RefundsPage.error": "Error getting refunds data",
+  "LayoutWrapperAccountSettingsSideNav.RefundsTabTitle": "Refunds",
+  
+
+  "ShippingPage.details": "List of shipments and their details",
+  "ShippingPage.heading": "Shipping",
+  "ShippingPage.title": "Shipping",
+  "ShippingPage.error": "Error getting shipping data",
+  "LayoutWrapperAccountSettingsSideNav.ShippingTabTitle": "Shipping",
+  
+
+  "ProductPage.details": "List of products and their details",
+  "ProductPage.heading": "Products",
+  "ProductPage.title": "Products",
+  "ProductPage.error": "Error getting products data",
+  "LayoutWrapperAccountSettingsSideNav.ProductTabTitle": "Products",
+
+  "CartsPage.details": "List of carts and their details",
+  "CartsPage.heading": "Carts",
+  "CartsPage.title": "Carts",
+  "CartsPage.error": "Error getting carts data",
+  "LayoutWrapperAccountSettingsSideNav.CartsTabTitle": "Carts",
+
+  "PurchasesPage.details": "List of purchases and their details",
+  "PurchasesPage.heading": "Purchases",
+  "PurchasesPage.title": "Purchases",
+  "PurchasesPage.error": "Error getting purchases data",
+  "LayoutWrapperAccountSettingsSideNav.PurchasesTabTitle": "Purchases",
+
+  "WishlistPage.details": "List of wishlist and their details",
+  "WishlistPage.heading": "Wishlist",
+  "WishlistPage.title": "Wishlist",
+  "WishlistPage.error": "Error getting wishlist data",
+  "LayoutWrapperAccountSettingsSideNav.WishlistTabTitle": "My Wishlist",
+
+  "CanceledPage.details": "List of canceled transactions and their details",
+  "CanceledPage.heading": "Canceled Transactions",
+  "CanceledPage.title": "Canceled Transactions",
+  "CanceledPage.error": "Error getting canceled transactions data",
+  "LayoutWrapperAccountSettingsSideNav.CanceledTabTitle": "Canceled Transactions"
+  
+
+  
+
+  
+
 
  
 

@@ -314,6 +314,7 @@ export const fetchCurrentUserNotifications = () => (dispatch, getState, sdk) => 
 
 export const fetchCurrentUser = (params = null) => (dispatch, getState, sdk) => {
   dispatch(currentUserShowRequest());
+  console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
   const { isAuthenticated } = getState().auth;
 
   if (!isAuthenticated) {

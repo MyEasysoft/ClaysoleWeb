@@ -43,16 +43,40 @@ const TermsOfServicePage = loadable(() => import(/* webpackChunkName: "TermsOfSe
 const TransactionPage = loadable(() => import(/* webpackChunkName: "TransactionPage" */ '../containers/TransactionPage/TransactionPage'));
 const UserPage = loadable(() => import(/* webpackChunkName: "UserPage" */ '../containers/UserDashboard/UserPage'));
 const VendorPage = loadable(() => import(/* webpackChunkName: "VendorPage" */ '../containers/VendorDashboard/VendorPage'));
-
+const DeleteAccountPage = loadable(() =>import(/* webpackChunkName: "DeleteAccountPage" */ '../containers/DeleteAccountPage/DeleteAccountPage'));
 // Styleguide helps you to review current components and develop new ones
 const StyleguidePage = loadable(() => import(/* webpackChunkName: "StyleguidePage" */ '../containers/StyleguidePage/StyleguidePage'));
+
+const SalesAccountPage = loadable(() => import(/* webpackChunkName: "SalesAccountPage" */ '../containers/SalesAccountPage/SalesAcountPage'));
+
+
+const SEOPage = loadable(() => import(/* webpackChunkName: "SEOPage" */ '../containers/SEOPage/SEOPage'));
+const AdsPage = loadable(() => import(/* webpackChunkName: "AdsPage" */ '../containers/AdsPage/AdsPage'));
+const RefundsPage = loadable(() => import(/* webpackChunkName: "RefundsPage" */ '../containers/RefundsPage/RefundsPage'));
+const ShippingPage = loadable(() => import(/* webpackChunkName: "SalesAccountPage" */ '../containers/ShippingPage/ShippingPage'));
+const ProductPage = loadable(() => import(/* webpackChunkName: "SalesAccountPage" */ '../containers/ProductPage/ProductPage'));
+const CartsPage = loadable(() => import(/* webpackChunkName: "SalesAccountPage" */ '../containers/CartsPage/CartsPage'));
+const PurchasesPage = loadable(() => import(/* webpackChunkName: "SalesAccountPage" */ '../containers/PurchasesPage/PurchasesPage'));
+const WishlistPage = loadable(() => import(/* webpackChunkName: "SalesAccountPage" */ '../containers/WishlistPage/WishlistPage'));
+const CanceledPage = loadable(() => import(/* webpackChunkName: "SalesAccountPage" */ '../containers/CanceledPage/CanceledPage'));
 
 export const ACCOUNT_SETTINGS_PAGES = [
   'ContactDetailsPage',
   'PasswordChangePage',
   'StripePayoutPage',
   'PaymentMethodsPage',
-  
+  'DeleteAccountPage',
+  'SalesAccountPage',
+  'SEOPage',
+  'AdsPage',
+  'RefundsPage',
+  'ShippingPage',
+  'ProductPage',
+  'ProductPage',
+  'CartsPage',
+  'PurchasesPage',
+  'WishlistPage',
+  'CanceledPage',
 ];
 
 // https://en.wikipedia.org/wiki/Universally_unique_identifier#Nil_UUID
@@ -152,6 +176,93 @@ const routeConfiguration = (layoutConfig) => {
       auth: true,
       component: EditListingPage,
       loadData: pageDataLoadingAPI.EditListingPage.loadData,
+    },
+    {
+      path: '/account/delete-profile',
+      name: 'DeleteAccountPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: DeleteAccountPage,
+    },
+
+    {
+      path: '/account/sales',
+      name: 'SalesAccountPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: SalesAccountPage,
+    },
+
+    {
+      path: '/account/seo',
+      name: 'SEOPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: SEOPage,
+    },
+
+    {
+      path: '/account/ads',
+      name: 'AdsPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: AdsPage,
+    },
+
+    {
+      path: '/account/refunds',
+      name: 'RefundsPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: RefundsPage,
+    },
+
+    {
+      path: '/account/shipping',
+      name: 'ShippingPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: ShippingPage,
+    },
+
+    {
+      path: '/account/products',
+      name: 'ProductPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: ProductPage,
+    },
+
+    {
+      path: '/account/carts',
+      name: 'CartsPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: CartsPage,
+    },
+
+    {
+      path: '/account/purchases',
+      name: 'PurchasesPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: PurchasesPage,
+    },
+
+    {
+      path: '/account/wishlist',
+      name: 'WishlistPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: WishlistPage,
+    },
+
+    {
+      path: '/account/canceled-transaction',
+      name: 'CanceledPage',
+      auth: true,
+      authPage: 'LoginPage',
+      component: CanceledPage,
     },
 
     // Canonical path should be after the `/l/new` path since they

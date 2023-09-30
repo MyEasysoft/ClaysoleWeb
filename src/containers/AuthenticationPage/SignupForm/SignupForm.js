@@ -123,6 +123,7 @@ const SignupFormComponent = props => (
       const classes = classNames(rootClassName || css.root, className);
       const submitInProgress = inProgress;
       const submitDisabled = invalid || submitInProgress;
+      const showAsRequired = invalid || submitInProgress;
       
       var isPersonal = false;
 
@@ -198,34 +199,23 @@ const SignupFormComponent = props => (
             </div>
 
 
-
             <div className={css.radioContainer}>
-              <div>
                 <FieldRadioButton
-                  className={css.radio}
-                  id={formId ? `${formId}.vendor` : 'vendor'}
-                  name="role"
-                  label={vendorLabel}
-                  
-                />
-              </div>
-              <div className={css.marginL1}>
-                <FieldRadioButton
-                  className={css.radio}
-                  id={formId ? `${formId}.seller` : 'seller'}
-                  name="role"
-                  label={sellerLabel}
-                  
-                />
-
-              </div>
-              
-               
-
-             
+                id='SignupForm.RoleVendor'
+                name="role"
+                label="I am a Vendor"
+                value="Vendor"
+                showAsRequired={showAsRequired}
+              />
+              <div className={css.radio}></div>
+              <FieldRadioButton
+                id='SignupForm.RoleSeller'
+                name="role"
+                label="I am a Seller"
+                value="Seller"
+                showAsRequired={showAsRequired}
+              />
             </div>
-           
-          
 
             <FieldTextInput
               className={css.password}

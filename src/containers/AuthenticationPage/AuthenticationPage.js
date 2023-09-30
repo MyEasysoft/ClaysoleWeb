@@ -142,6 +142,8 @@ export const AuthenticationForms = props => {
     submitSignup,
     termsAndConditions,
   } = props;
+
+  console.log("2222222222222222222222");
   const fromState = { state: from ? { from } : null };
   const tabs = [
     {
@@ -263,7 +265,7 @@ const ConfirmIdProviderInfoForm = props => {
       )}
     </div>
   ) : null;
-
+  console.log("33333333333333333333333333333");
   return (
     <div className={css.content}>
       <Heading as="h1" rootClassName={css.signupWithIdpTitle}>
@@ -393,6 +395,7 @@ export const AuthenticationPageComponent = props => {
   const user = ensureCurrentUser(currentUser);
   const currentUserLoaded = !!user.id;
   const isLogin = tab === 'login';
+  
 
   // We only want to show the email verification dialog in the signup
   // tab if the user isn't being redirected somewhere else
@@ -406,7 +409,7 @@ export const AuthenticationPageComponent = props => {
   } else if (isAuthenticated && currentUserLoaded && !showEmailVerification) {
     return <NamedRedirect name="LandingPage" />;
   }
-
+  
   const resendErrorTranslationId = isTooManyEmailVerificationRequestsError(
     sendVerificationEmailError
   )
